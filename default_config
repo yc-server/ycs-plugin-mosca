@@ -1,0 +1,9 @@
+import { IConfig } from 'ycs-plugin-mosca';
+
+export const development: IConfig = {
+  websocket: true,
+};
+
+export const production: IConfig = {
+  websocket: true,
+};
