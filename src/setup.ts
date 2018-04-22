@@ -40,7 +40,7 @@ function setupMosca(app: Ycs, config: IConfig) {
       )
     );
     preListenActions.push(httpServer => {
-      serve.attachHttpServer(httpServer);
+      server.attachHttpServer(httpServer);
     });
   } else {
     server = new mosca.Server({
