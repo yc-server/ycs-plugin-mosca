@@ -1,6 +1,6 @@
 {
   "name": "ycs-plugin-mosca",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ycs-plugin-mosca",
   "license": "MIT",
   "repository": "https://github.com/yc-server/ycs-plugin-mosca.git",
