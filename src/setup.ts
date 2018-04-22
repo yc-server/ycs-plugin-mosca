@@ -1,4 +1,5 @@
 import { Ycs } from '@ycs/core';
+import { preListenActions } from '@ycs/core/lib/http';
 import { Router } from '@ycs/core/lib/routers';
 import * as colors from 'colors/safe';
 import * as koa from 'koa';
@@ -38,6 +39,9 @@ function setupMosca(app: Ycs, config: IConfig) {
         new koa().use(serve(path.dirname(require.resolve('mosca')) + '/public'))
       )
     );
+    preListenActions.push(httpServer => {
+      serve.attachHttpServer(httpServer);
+    });
   } else {
     server = new mosca.Server({
       port: config.port,
